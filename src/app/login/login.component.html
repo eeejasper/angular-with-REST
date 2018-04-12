@@ -1,0 +1,18 @@
+<div class="alert alert-success alert-dismissible fade show"
+	role="alert">login works!</div>
+
+<div class="alert alert-danger" [hidden]="!error">There was a
+	problem logging in. Please try again.</div>
+<div class="row justify-content-md-center">
+
+
+
+	<label for="username">Username:</label> <input type="text"
+		class="form-control" id="username" name="username"
+		[(ngModel)]="enteredSSOid" /> <label for="password">Password:</label>
+	<input type="password" class="form-control" id="password"
+		name="password" [(ngModel)]="enteredPassword" />
+
+	<button (click)="login()" class="btn btn-primary">Submit</button>
+
+</div>

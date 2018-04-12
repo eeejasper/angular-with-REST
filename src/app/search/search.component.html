@@ -1,0 +1,45 @@
+<div *ngIf="error" class="alert alert-danger">Server error.</div>
+<div class="alert alert-success alert-dismissible fade show"
+	role="alert">Search Screen Works!!</div>
+
+<label>Interface Name: <input [(ngModel)]="enteredInterfaceName"
+	placeholder="name">
+</label>
+
+<div>
+	<button class="btn btn-outline-success" (click)="searchInterface()">Search</button>
+</div>
+
+
+
+<div *ngIf="searchResult">
+	<table class="table table-hover table-light">
+		<thead>
+			<tr>
+				<th scope="col">Interface Name</th>
+				<th scope="col">versions</th>
+				<th scope="col">Countries</th>
+				<th scope="col">Uploads</th>
+				<th scope="col">Downloads</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let search of searchResult">
+
+				<td>{{ search.ifaceName }}</td>
+				<td>{{ search.versions }}</td>
+				<td>{{ search.countries}}</td>
+				<td>{{ search.uploads}}</td>
+				<td>{{ search.downloads}}</td>
+				
+
+			</tr>
+
+		</tbody>
+	</table>
+</div>
+
+
+
+

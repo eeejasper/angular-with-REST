@@ -1,0 +1,26 @@
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  {{error}}
+</div>
+
+<label>Interface Name: <input [(ngModel)]="searchResult.ifaceName"
+	placeholder="name">
+</label>
+<label>Versions: <input [(ngModel)]="searchResult.versions"
+	placeholder="versions">
+</label>
+<label>Countries: <input [(ngModel)]="searchResult.countries"
+	placeholder="country">
+</label>
+<label>Uploads: <input [(ngModel)]="searchResult.uploads"
+	placeholder="uploads">
+</label>
+<label>Downloads: <input [(ngModel)]="searchResult.downloads"
+	placeholder="downloads">
+</label>
+
+<div>
+	<button class="btn btn-outline-success" (click)="addInterface()">Add</button>
+	<button class="btn btn-outline-success" (click)="loadInterface()">Load</button>
+	<button class="btn btn-outline-success" (click)="editInterface()">Edit</button>
+	<button class="btn btn-outline-success" (click)="deleteInterface()">Delete</button>
+</div>
